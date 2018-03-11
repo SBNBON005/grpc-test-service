@@ -1,0 +1,24 @@
+syntax = "proto3";
+package payment;
+
+service PaymentService{
+    rpc GetPaymentStatus (GetPaymentStatusRequest) returns (GetPaymentStatusResponse) {}
+    rpc GetToken (GetTokenRequest) returns (GetTokenResponse) {}
+}
+
+message GetPaymentStatusRequest{
+    string reference = 1;
+}
+
+message GetPaymentStatusResponse{
+    string status = 1;
+}
+
+message GetTokenRequest {
+    int32 order_id = 1;
+    float payment_amount = 2;
+}
+
+message GetTokenResponse {
+    string payment_token = 1;
+}
