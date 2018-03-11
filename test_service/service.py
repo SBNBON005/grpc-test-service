@@ -11,9 +11,9 @@ from test_service import controller
 class PaymentServer(service_definition_pb2_grpc.PaymentServiceServicer):
 
     def GetPaymentStatus(self, request, context):
-        print(dict(context.invocation_metadata()))
+        logging.info(dict(context.invocation_metadata()))
         payment_reference = request.reference
-        print(payment_reference)
+        logging.info(payment_reference)
         return service_definition_pb2.GetPaymentStatusResponse(status='status OK')
 
     def GetToken(self, request, context):
@@ -32,7 +32,7 @@ def serve():
     )
     server.add_insecure_port('[::]:50051')
     server.start()
-    print("started ...")
+    logging.info("started...")
     try:
         while True:
             time.sleep(_ONE_DAY_IN_SECONDS)
