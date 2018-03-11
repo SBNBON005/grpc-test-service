@@ -16,7 +16,7 @@ setup_args = {
     'long_description': "Update this!",
     'author': "Bongani Sibanda",
     'author_email': 'sibandabongz@gmail.com',
-    'url': 'https://github.com/...',
+    'url': 'https://github.com/SBNBON005/grpc-test-service.git',
     'packages': find_packages(),
     'package_dir': {'test_service':
                     'test_service'},
