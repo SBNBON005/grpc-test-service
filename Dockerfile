@@ -11,7 +11,7 @@ ENV TZ=Africa/Johannesburg
 COPY ./requirements.txt /usr/local/test_service/requirements.txt
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt grpcio-tools==1.10.0
+RUN pip install -r requirements.txt grpcio-tools==1.14.0
 
 ADD . /usr/local/test_service
 
